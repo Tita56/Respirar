@@ -54,12 +54,17 @@ class SoundManager {
             
             // .playback permite audio en background
             // .mixWithOthers permite que otros sonidos se reproduzcan simultáneamente
-            try audioSession.setCategory(.playback, mode: .default, options: [.mixWithOthers])
+            // .duckOthers reduce el volumen de otros audios mientras reproduce
+            try audioSession.setCategory(
+                .playback,
+                mode: .default,
+                options: [.mixWithOthers, .duckOthers]
+            )
             
             // Activar la sesión
             try audioSession.setActive(true)
             
-            print("✅ Audio configurado para background")
+            print("✅ Audio configurado para background (ignora switch de silencio)")
         } catch {
             print("❌ Error configurando sesión de audio: \(error)")
         }

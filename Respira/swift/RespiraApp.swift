@@ -15,7 +15,7 @@ struct RespiraApp: App {
             // 🧪 Para desarrollo: usa MainTabViewDebug
             // 📱 Para producción: usa MainTabView
             #if DEBUG
-            MainTabViewDebug()
+            MainTabView()
             #else
             MainTabView()
             #endif

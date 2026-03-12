@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var isActive = false
     @State private var currentPhaseIndex = 0
     @State private var cycleCount = 0
-    @State private var showInstructions = true
+    @State private var showInstructions = false
     @State private var showPatternSelection = false
     @State private var showSoundPresetSelection = false
     @State private var selectedPattern = BreathingPattern.patterns[0]
@@ -78,7 +78,7 @@ struct ContentView: View {
                         }) {
                             Image(systemName: soundManager.currentPreset.icon)
                                 .font(.title3)
-                                .foregroundColor(.purple)
+                                .foregroundColor(.blue)
                                 .frame(width: 44, height: 44)
                                 .background(Color(.systemBackground))
                                 .clipShape(Circle())
@@ -130,10 +130,13 @@ struct ContentView: View {
                     VStack(spacing: 8) {
                         Image(systemName: currentPhase.type == .inhale ? "arrow.down.circle.fill" :
                                          currentPhase.type == .exhale ? "arrow.up.circle.fill" :
-                                         currentPhase.type == .hold ? "pause.circle.fill" : "dot.circle.fill")
+                                         currentPhase.type == .hold ? "pause.circle.fill" :
+                                         "dot.circle.fill"
+                        )
                             .font(.system(size: 50))
                             .foregroundColor(.white)
-                            .rotationEffect(.degrees(currentPhase.type == .exhale ? 180 : 0))
+                            // .rotationEffect(.degrees(currentPhase.type == .exhale ? 180 : 0))
+                            .rotationEffect(.degrees(currentPhase.type == .exhale ? 180 : 3))
                         
                         if isActive {
                             Text("\(Int(currentPhase.duration))")

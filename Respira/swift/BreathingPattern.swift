@@ -94,7 +94,7 @@ enum BreathPhaseType {
     
     var color: Color {
         switch self {
-        case .inhale: return .green
+        case .inhale: return .blue
         case .hold: return .purple
         case .exhale: return .blue
         case .pause: return .yellow
