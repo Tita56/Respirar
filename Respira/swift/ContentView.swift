@@ -45,12 +45,12 @@ struct ContentView: View {
             )
             .ignoresSafeArea()
             
-            VStack(spacing: 40) {
+            VStack(spacing: 20) {
                 // Encabezado con título y controles
                 HStack {
                     VStack(alignment: .leading) {
                         Text("Control de Respiración")
-                            .font(.title)
+                            .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(currentPhase.type.color)
                         
@@ -107,8 +107,8 @@ struct ContentView: View {
                     // Círculo exterior (efecto de glow)
                     Circle()
                         .fill(currentPhase.type.color.opacity(0.3))
-                        .frame(width: isBreathingIn ? 280 : 180)
-                        .blur(radius: 20)
+                        .frame(width: isBreathingIn ? 360 : 220)
+                        .blur(radius: 25)
                     
                     // Círculo principal
                     Circle()
@@ -119,29 +119,20 @@ struct ContentView: View {
                                     currentPhase.type.color.opacity(0.4)
                                 ]),
                                 center: .center,
-                                startRadius: 20,
-                                endRadius: 150
+                                startRadius: 30,
+                                endRadius: 180
                             )
                         )
-                        .frame(width: isBreathingIn ? 250 : 150)
-                        .shadow(color: currentPhase.type.color.opacity(0.5), radius: 20)
+                        .frame(width: isBreathingIn ? 340 : 200)
+                        .shadow(color: currentPhase.type.color.opacity(0.5), radius: 25)
                     
-                    // Tiempo restante y fase
-                    VStack(spacing: 8) {
-                        Image(systemName: currentPhase.type == .inhale ? "arrow.down.circle.fill" :
-                                         currentPhase.type == .exhale ? "arrow.up.circle.fill" :
-                                         currentPhase.type == .hold ? "pause.circle.fill" :
-                                         "dot.circle.fill"
-                        )
-                            .font(.system(size: 50))
-                            .foregroundColor(.white)
-                            // .rotationEffect(.degrees(currentPhase.type == .exhale ? 180 : 0))
-                            .rotationEffect(.degrees(currentPhase.type == .exhale ? 180 : 3))
-                        
+                    // Tiempo restante en el centro
+                    VStack(spacing: 12) {
                         if isActive {
                             Text("\(Int(currentPhase.duration))")
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
+                                .font(.system(size: 72, weight: .ultraLight, design: .rounded))
                                 .foregroundColor(.white)
+                                .monospacedDigit()
                         }
                     }
                 }
@@ -149,19 +140,19 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.5), value: currentPhase.type)
                 
                 // Instrucciones
-                VStack(spacing: 10) {
+                VStack(spacing: 8) {
                     Text(currentPhase.type.instruction)
-                        .font(.title2)
+                        .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(.primary)
                     
                     if isActive {
                         Text("Ciclo: \(cycleCount)")
-                            .font(.headline)
+                            .font(.title3)
                             .foregroundColor(.secondary)
                     }
                 }
-                .frame(height: 80)
+                .frame(height: 100)
                 
                 Spacer()
                 
@@ -427,3 +418,4 @@ struct SessionSavedBanner: View {
     ContentView()
         .modelContainer(for: BreathingSession.self, inMemory: true)
 }
+
