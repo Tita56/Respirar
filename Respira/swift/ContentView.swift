@@ -261,6 +261,33 @@ struct ContentView: View {
                     .padding(.top, 50)
             }
         }
+        .onAppear {
+            checkForWidgetAction()
+        }
+    }
+    
+    // MARK: - Widget Integration
+    func checkForWidgetAction() {
+        let defaults = AppGroup.userDefaults
+        if let patternName = defaults.string(forKey: "selectedPatternFromWidget") {
+            // Buscar el patrón seleccionado
+            if let pattern = BreathingPattern.patterns.first(where: { $0.name == patternName }) {
+                selectedPattern = pattern
+                
+                // Iniciar automáticamente si no está activo
+                if !isActive {
+                    // Pequeño delay para que la UI se actualice
+                    Task {
+                        try? await Task.sleep(nanoseconds: 500_000_000)
+                        startBreathing()
+                    }
+                }
+            }
+            
+            // Limpiar el flag
+            defaults.removeObject(forKey: "selectedPatternFromWidget")
+            defaults.synchronize()
+        }
     }
     
     // Funciones de control
@@ -323,6 +350,17 @@ struct ContentView: View {
             
             // Feedback háptico de guardado exitoso
             hapticManager.playSessionSaved()
+            
+            // Actualizar datos del widget
+            Task { @MainActor in
+                let descriptor = FetchDescriptor<BreathingSession>(
+                    sortBy: [SortDescriptor(\.date, order: .reverse)]
+                )
+                if let allSessions = try? modelContext.fetch(descriptor) {
+                    let stats = BreathingSession.calculateStats(from: allSessions)
+                    WidgetDataManager.shared.updateWidgetData(stats: stats)
+                }
+            }
             
             // Mostrar banner de confirmación
             withAnimation {

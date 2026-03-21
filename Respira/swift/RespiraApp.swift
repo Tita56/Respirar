@@ -7,9 +7,29 @@
 
 import SwiftUI
 import SwiftData
+import Foundation
 
 @main
 struct RespiraApp: App {
+    // Model Container compartido con el widget
+    let sharedModelContainer: ModelContainer = {
+        let schema = Schema([
+            BreathingSession.self,
+        ])
+        
+        let modelConfiguration = ModelConfiguration(
+            schema: schema,
+            url: AppGroup.containerURL.appendingPathComponent("Respira.sqlite"),
+            cloudKitDatabase: .none
+        )
+
+        do {
+            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+        } catch {
+            fatalError("No se pudo crear ModelContainer: \(error)")
+        }
+    }()
+    
     var body: some Scene {
         WindowGroup {
             // 🧪 Para desarrollo: usa MainTabViewDebug
@@ -20,6 +40,6 @@ struct RespiraApp: App {
             MainTabView()
             #endif
         }
-        .modelContainer(for: BreathingSession.self)
+        .modelContainer(sharedModelContainer)
     }
 }
