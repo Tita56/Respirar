@@ -1,0 +1,24 @@
+{
+  "originHash" : "d5f8e4dd704e0e91f93d61f4a195132533452eeba5bfa58a6af8b9b216c5ac32",
+  "pins" : [
+    {
+      "identity" : "deepseekkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/guitaripod/DeepSeekKit",
+      "state" : {
+        "revision" : "be567583dc60ef0266e7200d39f775beba934b1c",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "626b5b7b2f45e1b0b1c6f4a309296d1d21d7311b",
+        "version" : "1.7.1"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -268,7 +268,7 @@ struct ContentView: View {
     
     // MARK: - Widget Integration
     func checkForWidgetAction() {
-        let defaults = AppGroup.userDefaults
+        let defaults = UserDefaults()
         if let patternName = defaults.string(forKey: "selectedPatternFromWidget") {
             // Buscar el patrón seleccionado
             if let pattern = BreathingPattern.patterns.first(where: { $0.name == patternName }) {
@@ -358,7 +358,7 @@ struct ContentView: View {
                 )
                 if let allSessions = try? modelContext.fetch(descriptor) {
                     let stats = BreathingSession.calculateStats(from: allSessions)
-                    WidgetDataManager.shared.updateWidgetData(stats: stats)
+                    //WidgetDataManager.shared.updateWidgetData(stats: stats)
                 }
             }
             

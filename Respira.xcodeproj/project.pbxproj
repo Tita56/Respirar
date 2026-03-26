@@ -42,31 +42,27 @@
 		};
 /* End PBXBuildRule section */
 
-/* Begin PBXContainerItemProxy section */
-		B5AE226B2F5B797F00AD62E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5AE22552F5B797E00AD62E6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5AE225C2F5B797E00AD62E6;
-			remoteInfo = Respira;
+/* Begin PBXCopyFilesBuildPhase section */
+		B5CEB6622F7553D70046C8CB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5AE22752F5B797F00AD62E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5AE22552F5B797E00AD62E6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5AE225C2F5B797E00AD62E6;
-			remoteInfo = Respira;
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B5AE225D2F5B797E00AD62E6 /* Respira.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Respira.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5AE226A2F5B797F00AD62E6 /* RespiraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RespiraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5AE22742F5B797F00AD62E6 /* RespiraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RespiraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5CEB6492F7553D60046C8CB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B5CEB64B2F7553D60046C8CB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B5E128CD2F6EC3B700A7C2AC /* Exceptions for "Respira" folder in "Respira" target */ = {
+		B5CEB6422F754D5D0046C8CB /* Exceptions for "Respira" folder in "Respira" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -79,39 +75,15 @@
 		B5AE225F2F5B797E00AD62E6 /* Respira */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				B5E128CD2F6EC3B700A7C2AC /* Exceptions for "Respira" folder in "Respira" target */,
+				B5CEB6422F754D5D0046C8CB /* Exceptions for "Respira" folder in "Respira" target */,
 			);
 			path = Respira;
-			sourceTree = "<group>";
-		};
-		B5AE226D2F5B797F00AD62E6 /* RespiraTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RespiraTests;
-			sourceTree = "<group>";
-		};
-		B5AE22772F5B797F00AD62E6 /* RespiraUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RespiraUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B5AE225A2F5B797E00AD62E6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5AE22672F5B797F00AD62E6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5AE22712F5B797F00AD62E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,8 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B5AE225F2F5B797E00AD62E6 /* Respira */,
-				B5AE226D2F5B797F00AD62E6 /* RespiraTests */,
-				B5AE22772F5B797F00AD62E6 /* RespiraUITests */,
+				B5CEB6482F7553D60046C8CB /* Frameworks */,
 				B5AE225E2F5B797E00AD62E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,10 +107,17 @@
 			isa = PBXGroup;
 			children = (
 				B5AE225D2F5B797E00AD62E6 /* Respira.app */,
-				B5AE226A2F5B797F00AD62E6 /* RespiraTests.xctest */,
-				B5AE22742F5B797F00AD62E6 /* RespiraUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B5CEB6482F7553D60046C8CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5CEB6492F7553D60046C8CB /* WidgetKit.framework */,
+				B5CEB64B2F7553D60046C8CB /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +130,7 @@
 				B5AE22592F5B797E00AD62E6 /* Sources */,
 				B5AE225A2F5B797E00AD62E6 /* Frameworks */,
 				B5AE225B2F5B797E00AD62E6 /* Resources */,
+				B5CEB6622F7553D70046C8CB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 				B5EF805B2F6873EE00248DE1 /* PBXBuildRule */,
@@ -170,52 +149,6 @@
 			productReference = B5AE225D2F5B797E00AD62E6 /* Respira.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B5AE22692F5B797F00AD62E6 /* RespiraTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5AE22812F5B797F00AD62E6 /* Build configuration list for PBXNativeTarget "RespiraTests" */;
-			buildPhases = (
-				B5AE22662F5B797F00AD62E6 /* Sources */,
-				B5AE22672F5B797F00AD62E6 /* Frameworks */,
-				B5AE22682F5B797F00AD62E6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5AE226C2F5B797F00AD62E6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				B5AE226D2F5B797F00AD62E6 /* RespiraTests */,
-			);
-			name = RespiraTests;
-			packageProductDependencies = (
-			);
-			productName = RespiraTests;
-			productReference = B5AE226A2F5B797F00AD62E6 /* RespiraTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B5AE22732F5B797F00AD62E6 /* RespiraUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5AE22842F5B797F00AD62E6 /* Build configuration list for PBXNativeTarget "RespiraUITests" */;
-			buildPhases = (
-				B5AE22702F5B797F00AD62E6 /* Sources */,
-				B5AE22712F5B797F00AD62E6 /* Frameworks */,
-				B5AE22722F5B797F00AD62E6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5AE22762F5B797F00AD62E6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				B5AE22772F5B797F00AD62E6 /* RespiraUITests */,
-			);
-			name = RespiraUITests;
-			packageProductDependencies = (
-			);
-			productName = RespiraUITests;
-			productReference = B5AE22742F5B797F00AD62E6 /* RespiraUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,19 +156,11 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2630;
-				LastUpgradeCheck = 2630;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					B5AE225C2F5B797E00AD62E6 = {
 						CreatedOnToolsVersion = 26.3;
-					};
-					B5AE22692F5B797F00AD62E6 = {
-						CreatedOnToolsVersion = 26.3;
-						TestTargetID = B5AE225C2F5B797E00AD62E6;
-					};
-					B5AE22732F5B797F00AD62E6 = {
-						CreatedOnToolsVersion = 26.3;
-						TestTargetID = B5AE225C2F5B797E00AD62E6;
 					};
 				};
 			};
@@ -248,34 +173,21 @@
 			);
 			mainGroup = B5AE22542F5B797E00AD62E6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B5BCEB5A2F72AC3D002C3C0C /* XCRemoteSwiftPackageReference "DeepSeekKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B5AE225E2F5B797E00AD62E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B5AE225C2F5B797E00AD62E6 /* Respira */,
-				B5AE22692F5B797F00AD62E6 /* RespiraTests */,
-				B5AE22732F5B797F00AD62E6 /* RespiraUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B5AE225B2F5B797E00AD62E6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5AE22682F5B797F00AD62E6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5AE22722F5B797F00AD62E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,34 +204,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5AE22662F5B797F00AD62E6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5AE22702F5B797F00AD62E6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B5AE226C2F5B797F00AD62E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B5AE225C2F5B797E00AD62E6 /* Respira */;
-			targetProxy = B5AE226B2F5B797F00AD62E6 /* PBXContainerItemProxy */;
-		};
-		B5AE22762F5B797F00AD62E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B5AE225C2F5B797E00AD62E6 /* Respira */;
-			targetProxy = B5AE22752F5B797F00AD62E6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B5AE227C2F5B797F00AD62E6 /* Debug */ = {
@@ -358,6 +243,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 24VX8G36BT;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -375,12 +261,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Respira;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -422,6 +311,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 24VX8G36BT;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -433,12 +323,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Respira;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -451,10 +344,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = Respira/Respira.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24VX8G36BT;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
 				ENABLE_FILE_ACCESS_MUSIC_FOLDER = readwrite;
@@ -475,14 +370,14 @@
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Respira/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Respira;
+				INFOPLIST_KEY_CFBundleDisplayName = casatita.Respira;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,10 +413,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = Respira/Respira.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24VX8G36BT;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readwrite;
 				ENABLE_FILE_ACCESS_MUSIC_FOLDER = readwrite;
@@ -542,14 +439,14 @@
 				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Respira/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Respira;
+				INFOPLIST_KEY_CFBundleDisplayName = casatita.Respira;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,90 +475,6 @@
 			};
 			name = Release;
 		};
-		B5AE22822F5B797F00AD62E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 24VX8G36BT;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = casatita.RespiraTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Respira.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Respira";
-			};
-			name = Debug;
-		};
-		B5AE22832F5B797F00AD62E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 24VX8G36BT;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = casatita.RespiraTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Respira.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Respira";
-			};
-			name = Release;
-		};
-		B5AE22852F5B797F00AD62E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 24VX8G36BT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = casatita.RespiraUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Respira;
-			};
-			name = Debug;
-		};
-		B5AE22862F5B797F00AD62E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 24VX8G36BT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = casatita.RespiraUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Respira;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -683,25 +496,18 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5AE22812F5B797F00AD62E6 /* Build configuration list for PBXNativeTarget "RespiraTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5AE22822F5B797F00AD62E6 /* Debug */,
-				B5AE22832F5B797F00AD62E6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5AE22842F5B797F00AD62E6 /* Build configuration list for PBXNativeTarget "RespiraUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5AE22852F5B797F00AD62E6 /* Debug */,
-				B5AE22862F5B797F00AD62E6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B5BCEB5A2F72AC3D002C3C0C /* XCRemoteSwiftPackageReference "DeepSeekKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guitaripod/DeepSeekKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = B5AE22552F5B797E00AD62E6 /* Project object */;
 }

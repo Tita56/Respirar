@@ -27,8 +27,8 @@ struct StartBreathingIntent: AppIntent {
     
     func perform() async throws -> some IntentResult {
         // Guardar el patrón seleccionado en UserDefaults para que la app lo use
-        AppGroup.userDefaults.set(patternName, forKey: "selectedPatternFromWidget")
-        AppGroup.userDefaults.synchronize()
+        //userDefaults.set(patternName, forKey: "selectedPatternFromWidget")
+        //userDefaults.synchronize()
         
         // Abrir la app
         return .result()
